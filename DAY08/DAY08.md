@@ -653,7 +653,7 @@ message time: 2026-11-27 14:28:45
 
 # 실습 과제
 
-
+```python
 from pwn import *
 
 # TODO 1: Load ELF
@@ -739,10 +739,10 @@ try:
 finally:
     p.close()
 
-
+```
 # 추가 도전 과제
 
-
+```python
 from pwn import *
 
 def recv_addr(p, label):
@@ -774,6 +774,7 @@ for i in range(3):
     print(elf.functions['inspect_stack'])
     # 프로세스 종료
     p.close()
+```
 
 확인 결과 RBP, BUF, RET 주소값은 실행 할 때 마다 달랐지만, 상대 거리 값은 항상 동일 했어.
 inspect 함수 주소도 동일했는데 이 부분은 확신이 없어.
